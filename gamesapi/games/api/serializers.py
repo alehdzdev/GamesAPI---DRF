@@ -33,6 +33,10 @@ class PublisherSerializer(serializers.ModelSerializer):
 class GameSerializer(serializers.ModelSerializer):
 
     created_at = serializers.SerializerMethodField()
+    developer = DeveloperSerializer(read_only=True)
+    publisher = PublisherSerializer(read_only=True)
+    genres = GenreSerializer(many=True, read_only=True)
+    platforms = PlatformSerializer(many=True, read_only=True)
 
     class Meta:
         model = Game
