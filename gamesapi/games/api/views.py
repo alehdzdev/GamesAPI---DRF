@@ -1,4 +1,8 @@
 from rest_framework import generics
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.generics import get_object_or_404
+from rest_framework.renderers import JSONRenderer
 
 from games.api.serializers import (PlatformSerializer, 
                                    DeveloperSerializer, 
@@ -20,6 +24,18 @@ class DeveloperListAPIView(generics.ListAPIView):
     serializer_class = DeveloperSerializer
 
 
+class DeveloperDetailAPIView(APIView):
+
+    def get_object(self, pk):
+        developer = get_object_or_404(Developer, pk=pk)
+        return developer
+
+    def get(self, request, pk):
+        developer = self.get_object(pk)
+        serializer = DeveloperSerializer(developer)
+        return Response(serializer.data)
+
+
 class GenreListAPIView(generics.ListAPIView):
     """Provide a read-only view for genres"""
     queryset = Genre.objects.all()
@@ -34,7 +50,8 @@ class PublisherListAPIView(generics.ListAPIView):
 
 class GameListAPIView(generics.ListAPIView):
     """Provide a read-only view for games"""
-    queryset = Game.objects.all()
+    # renderer_classes = [JSONRenderer]
+    queryset = Game.objects.all().order_by('-created_at')
     serializer_class = GameSerializer
 
 
