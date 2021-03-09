@@ -9,9 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-import json
 from pathlib import Path
-from django.core.exceptions import ImproperlyConfigured
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -19,15 +17,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-with open("secret.json") as f:
-    secret = json.loads(f.read())
-
-def get_secret(secret_name, secrets=secret):
-    try:
-        return secrets[secret_name]
-    except:
-        msg = "The variable %s does not exist" % secret_name
-        raise ImproperlyConfigured(msg)
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'hx$4s0b@_g333wb^@y4i+$&q6mk9k4^ptj2!laf-+mf!eca*y_'
@@ -35,7 +24,7 @@ SECRET_KEY = 'hx$4s0b@_g333wb^@y4i+$&q6mk9k4^ptj2!laf-+mf!eca*y_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -90,10 +79,10 @@ WSGI_APPLICATION = 'gamesapi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': get_secret('DB_NAME'),
-        'USER': get_secret('USER'),
-        'PASSWORD': get_secret('PASSWORD'),
-        'HOST': 'localhost',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
