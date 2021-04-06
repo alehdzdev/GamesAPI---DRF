@@ -35,10 +35,11 @@ class Game(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     name = models.CharField(max_length=100)
     release_date = models.DateField()
+    cover = models.ImageField(upload_to='covers')
     genres = models.ManyToManyField(Genre, related_name="genres")
     platforms = models.ManyToManyField(Platform, related_name="platforms")
-    developers = models.ManyToManyField(Developer, related_name="developers")
-    publishers = models.ManyToManyField(Publisher, related_name="publishers")
+    developers = models.ForeignKey(Developer, on_delete=models.CASCADE, related_name="developers")
+    publishers = models.ForeignKey(Publisher, on_delete=models.CASCADE, related_name="publishers")
     
     def __str__(self):
         return self.name
