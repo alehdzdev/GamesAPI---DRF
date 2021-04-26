@@ -55,3 +55,13 @@ class GameListAPIView(generics.ListAPIView):
     serializer_class = GameSerializer
 
 
+class GameDetailAPIView(APIView):
+
+    def get_object(self, pk):
+        game = get_object_or_404(Game, pk=pk)
+        return game
+
+    def get(self, request, pk):
+        game = self.get_object(pk)
+        serializer = GameSerializer(game)
+        return Response(serializer.data)

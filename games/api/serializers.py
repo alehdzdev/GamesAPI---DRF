@@ -33,8 +33,8 @@ class PublisherSerializer(serializers.ModelSerializer):
 class GameSerializer(serializers.ModelSerializer):
 
     created_at = serializers.SerializerMethodField()
-    developers = DeveloperSerializer(many=True, read_only=True)
-    publishers = PublisherSerializer(many=True, read_only=True)
+    developers = DeveloperSerializer(read_only=True)
+    publishers = PublisherSerializer(read_only=True)
     genres = GenreSerializer(many=True, read_only=True)
     platforms = PlatformSerializer(many=True, read_only=True)
 

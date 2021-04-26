@@ -2,7 +2,20 @@ from django.db import models
 
 
 class Platform(models.Model):
+    GENERATIONS = [
+        ('1st', 'First generation'),
+        ('2nd', 'Second generation'),
+        ('3rd', 'Third generation'),
+        ('4th', 'Fourth generation'),
+        ('5th', 'Fifth generation'),
+        ('6th', 'Sixth generation'),
+        ('7nd', 'Seventh generation'),
+        ('8rd', 'Eighth generation'),
+        ('9th', 'Ninth generation'),
+    ]
     name = models.CharField(max_length=50, unique=True)
+    generation = models.CharField(max_length=4, choices=GENERATIONS)
+    
 
     def __str__(self):
         return self.name
@@ -38,8 +51,8 @@ class Game(models.Model):
     cover = models.ImageField(upload_to='covers')
     genres = models.ManyToManyField(Genre, related_name="genres")
     platforms = models.ManyToManyField(Platform, related_name="platforms")
-    developers = models.ForeignKey(Developer, on_delete=models.CASCADE, related_name="developers")
-    publishers = models.ForeignKey(Publisher, on_delete=models.CASCADE, related_name="publishers")
+    developer = models.ForeignKey(Developer, on_delete=models.CASCADE, related_name="developer")
+    publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE, related_name="publisher")
     
     def __str__(self):
         return self.name

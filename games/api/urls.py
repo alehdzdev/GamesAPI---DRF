@@ -1,4 +1,4 @@
-from django.urls import include, path
+from django.urls import path
 from games.api import views as gv
 
 urlpatterns = [
@@ -8,4 +8,5 @@ urlpatterns = [
     path("genres/", gv.GenreListAPIView.as_view(),name="genres-list"),
     path("publishers/", gv.PublisherListAPIView.as_view(),name="publishers-list"),
     path("games/", gv.GameListAPIView.as_view(),name="games-list"),
+    path("games/<pk>/", gv.GameDetailAPIView.as_view(),name="game-detail"),
 ]
