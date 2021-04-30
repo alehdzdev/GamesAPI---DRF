@@ -1,0 +1,213 @@
+[
+    {
+        "model": "games.platform",
+        "pk": 1,
+        "fields": {
+            "name": "Nintendo Entertainment System"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 2,
+        "fields": {
+            "name": "Super Nintendo Entertainment System"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 3,
+        "fields": {
+            "name": "Nintendo 64"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 4,
+        "fields": {
+            "name": "PlayStation 1"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 5,
+        "fields": {
+            "name": "PlayStation 2"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 6,
+        "fields": {
+            "name": "PlayStation 3"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 7,
+        "fields": {
+            "name": "PlayStation 4"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 8,
+        "fields": {
+            "name": "PlayStation 5"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 9,
+        "fields": {
+            "name": "PlayStation Portable"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 10,
+        "fields": {
+            "name": "PlayStation Vita"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 11,
+        "fields": {
+            "name": "Nintendo DS"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 12,
+        "fields": {
+            "name": "Nintendo 3DS"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 13,
+        "fields": {
+            "name": "GameBoy"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 14,
+        "fields": {
+            "name": "GameBoy Color"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 15,
+        "fields": {
+            "name": "GameBoy Advance"
+        }
+    },
+
+    {
+        "model": "games.platform",
+        "pk": 16,
+        "fields": {
+            "name": "Nintendo Gamecube"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 17,
+        "fields": {
+            "name": "Wii"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 18,
+        "fields": {
+            "name": "Wii U"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 19,
+        "fields": {
+            "name": "Nintendo Switch"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 20,
+        "fields": {
+            "name": "Xbox"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 21,
+        "fields": {
+            "name": "Xbox 360"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 22,
+        "fields": {
+            "name": "Xbox One"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 23,
+        "fields": {
+            "name": "Xbox One X"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 24,
+        "fields": {
+            "name": "Xbox Series S"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 25,
+        "fields": {
+            "name": "Xbox Series X"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 26,
+        "fields": {
+            "name": "Sega Mega Drive"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 27,
+        "fields": {
+            "name": "Sega Master System"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 28,
+        "fields": {
+            "name": "Sega Game Gear"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 28,
+        "fields": {
+            "name": "Sega Dreamcast"
+        }
+    },
+    {
+        "model": "games.platform",
+        "pk": 29,
+        "fields": {
+            "name": "Sega Saturn"
+        }
+    }
+]
