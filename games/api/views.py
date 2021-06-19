@@ -17,6 +17,18 @@ class PlatformListAPIView(generics.ListAPIView):
     serializer_class = PlatformSerializer
 
 
+class PlatformDetailAPIView(APIView):
+
+    def get_object(self, pk):
+        platform = get_object_or_404(Platform, pk=pk)
+        return platform
+
+    def get(self, request, pk):
+        platform = self.get_object(pk)
+        serializer = PlatformSerializer(platform)
+        return Response(serializer.data)
+
+
 class DeveloperListAPIView(generics.ListAPIView):
     """Provide a read-only view for developers"""
     queryset = Developer.objects.all()
@@ -41,10 +53,34 @@ class GenreListAPIView(generics.ListAPIView):
     serializer_class = GenreSerializer
 
 
+class GenreDetailAPIView(APIView):
+
+    def get_object(self, pk):
+        genre = get_object_or_404(Genre, pk=pk)
+        return genre
+
+    def get(self, request, pk):
+        genre = self.get_object(pk)
+        serializer = GenreSerializer(genre)
+        return Response(serializer.data)
+
+
 class PublisherListAPIView(generics.ListAPIView):
     """Provide a read-only view for publishers"""
     queryset = Publisher.objects.all()
     serializer_class = PublisherSerializer
+
+
+class PublisherDetailAPIView(APIView):
+
+    def get_object(self, pk):
+        publisher = get_object_or_404(Publisher, pk=pk)
+        return publisher
+
+    def get(self, request, pk):
+        publisher = self.get_object(pk)
+        serializer = PublisherSerializer(publisher)
+        return Response(serializer.data)
 
 
 class GameListAPIView(generics.ListAPIView):
