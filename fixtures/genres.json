@@ -80,7 +80,7 @@
         "model": "games.genre",
         "pk": 12,
         "fields": {
-            "name": "Platform"
+            "name": "Open world"
         }
     },
     {
@@ -130,7 +130,7 @@
         "model": "games.genre",
         "pk": 19,
         "fields": {
-            "name": "Real-time 3D"
+            "name": "Real-time 3D adventures"
         }
     },
     {
@@ -424,7 +424,7 @@
         "model": "games.genre",
         "pk": 61,
         "fields": {
-            "name": "Shooter"
+            "name": "First Person Shooter"
         }
     }
 ]
