@@ -9,15 +9,12 @@ I am going to improve by the time, I am open to recive **pull request** and seek
 ### Endpoints:
 
  - /api/games/
+ - /api/games/{gameId}/
  - /api/platforms/
+ - /api/platforms/{platformId}/
  - /api/developers/
- - /api/developers/id/
+ - /api/developers/{developerId}/
  - /api/genres/
+ - /api/genres/{genresId}/
  - /api/publishers/
-
-## Installation
-```
-docker-compose up -d
-```
-```
-docker-compose exec web python manage.py migrate
+ - /api/publishers/{publishersId}
