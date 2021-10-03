@@ -3,11 +3,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.generics import get_object_or_404
 
-from games.api.serializers import (PlatformSerializer,
-                                   DeveloperSerializer,
-                                   GenreSerializer,
-                                   PublisherSerializer,
-                                   GameSerializer)
+from games.api.serializers import (PlatformSerializer, DeveloperSerializer, GenreSerializer,
+                                   PublisherSerializer, GameSerializer)
 from games.models import Platform, Developer, Genre, Publisher, Game
 
 
@@ -36,6 +33,7 @@ class DeveloperListAPIView(generics.ListAPIView):
 
 
 class DeveloperDetailAPIView(APIView):
+    """Provide the detail for a specific developer"""
 
     def get_object(self, pk):
         developer = get_object_or_404(Developer, pk=pk)
@@ -54,6 +52,7 @@ class GenreListAPIView(generics.ListAPIView):
 
 
 class GenreDetailAPIView(APIView):
+    """Provide the detail for a specific genre"""
 
     def get_object(self, pk):
         genre = get_object_or_404(Genre, pk=pk)
@@ -72,6 +71,7 @@ class PublisherListAPIView(generics.ListAPIView):
 
 
 class PublisherDetailAPIView(APIView):
+    """Provide the detail for a specific publisher"""
 
     def get_object(self, pk):
         publisher = get_object_or_404(Publisher, pk=pk)
@@ -90,7 +90,7 @@ class GameListAPIView(generics.ListAPIView):
 
 
 class GameDetailAPIView(APIView):
-
+    """Provide the detail for a specific game"""
     def get_object(self, pk):
         game = get_object_or_404(Game, pk=pk)
         return game

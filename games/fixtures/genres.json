@@ -1,0 +1,431 @@
+[
+    {
+        "model": "games.genre",
+        "pk": 1,
+        "fields": {
+            "name": "Action"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 2,
+        "fields": {
+            "name": "Platform"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 3,
+        "fields": {
+            "name": "Shooter"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 4,
+        "fields": {
+            "name": "Fighting"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 5,
+        "fields": {
+            "name": "Beat 'em up"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 6,
+        "fields": {
+            "name": "Stealth"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 7,
+        "fields": {
+            "name": "Survival"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 8,
+        "fields": {
+            "name": "Rhythm"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 9,
+        "fields": {
+            "name": "Battle Royale"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 10,
+        "fields": {
+            "name": "Action-adventure"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 11,
+        "fields": {
+            "name": "Survival horror"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 12,
+        "fields": {
+            "name": "Open world"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 13,
+        "fields": {
+            "name": "Metroidvania"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 14,
+        "fields": {
+            "name": "Adventure"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 15,
+        "fields": {
+            "name": "Text adventures"
+        }
+    },
+
+    {
+        "model": "games.genre",
+        "pk": 16,
+        "fields": {
+            "name": "Graphic adventures"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 17,
+        "fields": {
+            "name": "Visual novels"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 18,
+        "fields": {
+            "name": "Interactive movie"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 19,
+        "fields": {
+            "name": "Real-time 3D adventures"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 20,
+        "fields": {
+            "name": "Role-playing"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 21,
+        "fields": {
+            "name": "Action RPG"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 22,
+        "fields": {
+            "name": "MMORPG"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 23,
+        "fields": {
+            "name": "Roguelikes"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 24,
+        "fields": {
+            "name": "Tactical RPG"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 25,
+        "fields": {
+            "name": "Sandbox RPG"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 26,
+        "fields": {
+            "name": "First-person party-based RPG"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 27,
+        "fields": {
+            "name": "JRPG"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 28,
+        "fields": {
+            "name": "Monster Tamer"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 29,
+        "fields": {
+            "name": "Simulation"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 30,
+        "fields": {
+            "name": "Construction and management simulation"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 31,
+        "fields": {
+            "name": "Life simulation"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 32,
+        "fields": {
+            "name": "Vehicle simulation"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 33,
+        "fields": {
+            "name": "Strategy"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 34,
+        "fields": {
+            "name": "4X"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 35,
+        "fields": {
+            "name": "Artillery game"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 36,
+        "fields": {
+            "name": "Auto battler"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 37,
+        "fields": {
+            "name": "Multiplayer online battle arena"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 38,
+        "fields": {
+            "name": "Real-time strategy"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 39,
+        "fields": {
+            "name": "Real-time tactics"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 40,
+        "fields": {
+            "name": "Tower defense"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 41,
+        "fields": {
+            "name": "Turn-based strategy"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 42,
+        "fields": {
+            "name": "Turn-based tactics"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 43,
+        "fields": {
+            "name": "Wargame"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 44,
+        "fields": {
+            "name": "Grand strategy wargame"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 45,
+        "fields": {
+            "name": "Sports"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 46,
+        "fields": {
+            "name": "Racing"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 47,
+        "fields": {
+            "name": "Competitive"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 48,
+        "fields": {
+            "name": "Sports-based fighting"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 49,
+        "fields": {
+            "name": "MMO"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 50,
+        "fields": {
+            "name": "Board game"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 51,
+        "fields": {
+            "name": "Casual"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 52,
+        "fields": {
+            "name": "Digital collectible card game"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 53,
+        "fields": {
+            "name": "Gacha"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 54,
+        "fields": {
+            "name": "Horror"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 55,
+        "fields": {
+            "name": "Idle"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 56,
+        "fields": {
+            "name": "Logic"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 57,
+        "fields": {
+            "name": "Party"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 58,
+        "fields": {
+            "name": "Programming"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 59,
+        "fields": {
+            "name": "Trivia"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 60,
+        "fields": {
+            "name": "Typing"
+        }
+    },
+    {
+        "model": "games.genre",
+        "pk": 61,
+        "fields": {
+            "name": "First Person Shooter"
+        }
+    }
+]
+  
