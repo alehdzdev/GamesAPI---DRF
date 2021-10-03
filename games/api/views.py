@@ -2,6 +2,7 @@ from rest_framework import generics
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.generics import get_object_or_404
+from django.http import JsonResponse
 
 from games.api.serializers import (PlatformSerializer, DeveloperSerializer, GenreSerializer,
                                    PublisherSerializer, GameSerializer)
@@ -9,12 +10,13 @@ from games.models import Platform, Developer, Genre, Publisher, Game
 
 
 class PlatformListAPIView(generics.ListAPIView):
-    """Provide a read-only view for platforms"""
+    """Provide a read-only view for platforms."""
     queryset = Platform.objects.all()
     serializer_class = PlatformSerializer
 
 
 class PlatformDetailAPIView(APIView):
+    """Provide the detail for a specific platform."""
 
     def get_object(self, pk):
         platform = get_object_or_404(Platform, pk=pk)
@@ -27,13 +29,13 @@ class PlatformDetailAPIView(APIView):
 
 
 class DeveloperListAPIView(generics.ListAPIView):
-    """Provide a read-only view for developers"""
+    """Provide a read-only view for developers."""
     queryset = Developer.objects.all()
     serializer_class = DeveloperSerializer
 
 
 class DeveloperDetailAPIView(APIView):
-    """Provide the detail for a specific developer"""
+    """Provide the detail for a specific developer."""
 
     def get_object(self, pk):
         developer = get_object_or_404(Developer, pk=pk)
@@ -46,13 +48,13 @@ class DeveloperDetailAPIView(APIView):
 
 
 class GenreListAPIView(generics.ListAPIView):
-    """Provide a read-only view for genres"""
+    """Provide a read-only view for genres."""
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer
 
 
 class GenreDetailAPIView(APIView):
-    """Provide the detail for a specific genre"""
+    """Provide the detail for a specific genre."""
 
     def get_object(self, pk):
         genre = get_object_or_404(Genre, pk=pk)
@@ -65,13 +67,13 @@ class GenreDetailAPIView(APIView):
 
 
 class PublisherListAPIView(generics.ListAPIView):
-    """Provide a read-only view for publishers"""
+    """Provide a read-only view for publishers."""
     queryset = Publisher.objects.all()
     serializer_class = PublisherSerializer
 
 
 class PublisherDetailAPIView(APIView):
-    """Provide the detail for a specific publisher"""
+    """Provide the detail for a specific publisher."""
 
     def get_object(self, pk):
         publisher = get_object_or_404(Publisher, pk=pk)
@@ -84,13 +86,13 @@ class PublisherDetailAPIView(APIView):
 
 
 class GameListAPIView(generics.ListAPIView):
-    """Provide a read-only view for games"""
+    """Provide a read-only view for games."""
     queryset = Game.objects.all().order_by('-created_at')
     serializer_class = GameSerializer
 
 
 class GameDetailAPIView(APIView):
-    """Provide the detail for a specific game"""
+    """Provide the detail for a specific game."""
     def get_object(self, pk):
         game = get_object_or_404(Game, pk=pk)
         return game
@@ -99,3 +101,10 @@ class GameDetailAPIView(APIView):
         game = self.get_object(pk)
         serializer = GameSerializer(game)
         return Response(serializer.data)
+
+
+class GameHealthStatus(generics.ListAPIView):
+    """Health APIView to check the health of the API."""
+
+    def list(self, request, *args, **kwargs):
+        return JsonResponse({'status': 'OK'})
