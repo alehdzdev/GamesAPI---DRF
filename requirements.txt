@@ -27,3 +27,4 @@ sqlparse==0.4.1
 uritemplate==3.0.1
 urllib3==1.26.4
 django-3-jet==1.0.8
+django-health-check==3.16.4

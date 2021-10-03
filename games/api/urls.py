@@ -1,4 +1,6 @@
-from django.urls import path
+"""URLs from games app"""
+
+from django.urls import path, re_path, include
 from games.api import views as gv
 
 urlpatterns = [
@@ -12,4 +14,6 @@ urlpatterns = [
     path("publishers/<pk>/", gv.PublisherDetailAPIView.as_view(), name="publishers-detail"),
     path("games/", gv.GameListAPIView.as_view(), name="games-list"),
     path("games/<pk>/", gv.GameDetailAPIView.as_view(), name="game-detail"),
+    path("health/", gv.GameHealthStatus.as_view(), name="health"),
+    re_path(r'^health_check/', include('health_check.urls')),
 ]
